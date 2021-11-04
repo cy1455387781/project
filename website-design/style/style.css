@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+nav {
+  background-color: #261f2c;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 15px 9px 15px !important;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: serif;
+}
+
+nav ul li:hover {
+  background-color: #b9b8b9;
+}
+
+footer {
+  background-color: #261f2c;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  padding:3px 40px;
+  height: 20vh;
+}
