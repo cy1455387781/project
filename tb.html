@@ -39,6 +39,8 @@
         text-align: center;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        position: sticky;
+        top:0;
       }
     </style>
   </head>
@@ -76,7 +78,7 @@
       <tr>
         <td>
           <img
-            id="lk"
+            id="lk1"
             src="images/tba.jpg"
             alt="Look1"
             title="Look1"
@@ -86,7 +88,7 @@
         </td>
         <td>
           <img
-            id="lk"
+            id="lk2"
             src="images/tbb.jpg"
             alt="Look2"
             title="Look2"
@@ -96,7 +98,7 @@
         </td>
         <td>
           <img
-            id="lk"
+            id="lk3"
             src="images/tbc.jpg"
             alt="Look3"
             title="Look3"
@@ -108,7 +110,7 @@
       <tr>
         <td>
           <img
-            id="lk"
+            id="lk4"
             src="images/tbm.jpg"
             alt="Look4"
             title="Look4"
@@ -118,7 +120,7 @@
         </td>
         <td>
           <img
-            id="lk"
+            id="lk5"
             src="images/tbd.jpg"
             alt="Look5"
             title="Look5"
@@ -128,7 +130,7 @@
         </td>
         <td>
           <img
-            id="lk"
+            id="lk6"
             src="images/tbe.jpg"
             alt="Look6"
             title="Look6"
@@ -138,8 +140,93 @@
         </td>
       </tr>
     </table>
+    <script>
+      function change1() {
+        document.getElementById("caption").innerText = "Look 1";
+      }
+      function back1() {
+        document.getElementById("caption").innerText =
+          "Thom Browne Runway Looks";
+      }
 
-    <!--jvscript show title of the photos mouseover-->
-    <!--mouseover enlarge-->
+      document.getElementById("lk1").addEventListener("mouseover", function () {
+        change1();
+      });
+      document.getElementById("lk1").addEventListener("mouseout", function () {
+        back1();
+      });
+      function change2() {
+        document.getElementById("caption").innerText = "Look 2";
+      }
+      function back2() {
+        document.getElementById("caption").innerText =
+          "Thom Browne Runway Looks";
+      }
+
+      document.getElementById("lk2").addEventListener("mouseover", function () {
+        change2();
+      });
+      document.getElementById("lk2").addEventListener("mouseout", function () {
+        back2();
+      });
+      function change3() {
+        document.getElementById("caption").innerText = "Look 3";
+      }
+      function back3() {
+        document.getElementById("caption").innerText =
+          "Thom Browne Runway Looks";
+      }
+
+      document.getElementById("lk3").addEventListener("mouseover", function () {
+        change3();
+      });
+      document.getElementById("lk3").addEventListener("mouseout", function () {
+        back3();
+      });
+
+      function change4() {
+        document.getElementById("caption").innerText = "Look 4";
+      }
+      function back4() {
+        document.getElementById("caption").innerText =
+          "Thom Browne Runway Looks";
+      }
+
+      document.getElementById("lk4").addEventListener("mouseover", function () {
+        change4();
+      });
+      document.getElementById("lk4").addEventListener("mouseout", function () {
+        back4();
+      });
+
+      function change5() {
+        document.getElementById("caption").innerText = "Look 5";
+      }
+      function back5() {
+        document.getElementById("caption").innerText =
+          "Thom Browne Runway Looks";
+      }
+
+      document.getElementById("lk5").addEventListener("mouseover", function () {
+        change5();
+      });
+      document.getElementById("lk5").addEventListener("mouseout", function () {
+        back5();
+      });
+      function change6() {
+        document.getElementById("caption").innerText = "Look 6";
+      }
+      function back6() {
+        document.getElementById("caption").innerText =
+          "Thom Browne Runway Looks";
+      }
+
+      document.getElementById("lk6").addEventListener("mouseover", function () {
+        change6();
+      });
+      document.getElementById("lk6").addEventListener("mouseout", function () {
+        back6();
+      });
+    </script>
   </body>
 </html>

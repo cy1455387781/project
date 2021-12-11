@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Yvonne Chen" />
-    <meta name="description" content="gets contact info."/>
+    <meta name="description" content="gets contact info." />
     <meta name="keywords" content="contact" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Contact</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <style>
       body {
         background-color: rgb(248, 247, 248);
@@ -79,6 +79,7 @@
               <label class="fix-width-label" for="name">Name:</label>
               <input
                 id="name"
+                name="name"
                 type="text"
                 placeholder="Please enter your full name here"
               />
@@ -89,6 +90,7 @@
               <input
                 id="email"
                 type="text"
+                name="email"
                 placeholder="Please enter your email address here"
               />
             </div>
@@ -106,6 +108,12 @@
                 <option value="Others">Others</option>
               </select>
             </div>
+            <div class="input">
+              <label
+                >Your information will appear here: <br />
+                <textarea cols="40" name="result" rows="4" readonly></textarea>
+              </label>
+            </div>
 
             <div class="input">
               <label for="comment"
@@ -118,9 +126,11 @@
             <br />
 
             <div class="input">
-              <button type="submit">Submit</button>
+              <button id="submit" type="submit">Submit</button>
               <button type="reset">Clear</button>
             </div>
+        
+
           </fieldset>
         </form>
       </div>
@@ -130,5 +140,25 @@
       <p>Email: <a href="mailto:ychen4@babson.edu"> ychen4@babson.edu</a></p>
       <p>Phone: 617-755-6520</p>
     </footer>
+    <script>
+      function display() {
+        const myForm = document.querySelector("form");
+        const fullName = myForm["name"].value;
+        const fullMail = myForm["email"].value;
+        const favBrand = myForm.brands.value;
+
+        if (fullName.length === 0 || fullMail.length === 0) {
+          alert("You did not finish the form yet");
+        } else {
+          let message = "Name:" + fullName + "\nFavorite Brand:" + favBrand;
+
+          myForm.result.value = message;
+        }
+      }
+
+      document.getElementById("submit").onclick = function () {
+        display();
+      };
+    </script>
   </body>
 </html>

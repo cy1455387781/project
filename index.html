@@ -9,7 +9,7 @@
     <meta name="keywords" content="fashion,Chanel,Armani,TB" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Homepage</title>
     <style>
       .slideshow-container {
@@ -18,7 +18,7 @@
         margin: auto;
       }
 
-      .mySlides{
+      .mySlides {
         display: none;
       }
 
@@ -94,6 +94,7 @@
 
       .brands th {
         font-size: 24px;
+        
       }
 
       .brands td {
@@ -179,7 +180,7 @@
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
       <h3>Fashion Industry Situation:</h3>
-      <p>
+      <p id="changeE">
         2020 and 2021 has disrupted businesses around the world. The global
         pandemic has greatly impacted the <b>luxury fashion industry</b>,
         especially the segment of high-end business clothing. The retail stores
@@ -208,6 +209,7 @@
             <td>
               <a href="chanel.html">
                 <img
+                  id="cc"
                   src="images/chanellogo.png"
                   alt="chanellogo"
                   title="chanel logo"
@@ -216,12 +218,18 @@
             </td>
             <td>
               <a href="armani.html">
-                <img src="images/al.png" alt="armanilogo" title="armani logo" />
+                <img
+                  id="aa"
+                  src="images/al.png"
+                  alt="armanilogo"
+                  title="armani logo"
+                />
               </a>
             </td>
             <td>
               <a href="tb.html">
                 <img
+                  id="tt"
                   class="ti"
                   src="images/tblogo.png"
                   alt="tblogo"
@@ -271,6 +279,70 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+      }
+
+      function enlargeC() {
+        const logoC = document.getElementById("cc");
+        let wc = logoC.width;
+        wc = wc * 1.2;
+        logoC.width = wc;
+      }
+      document.getElementById("cc").onmouseover = enlargeC;
+      function enlargeA() {
+        const logoA = document.getElementById("aa");
+        let wa = logoA.width;
+
+        wa = wa * 1.2;
+
+        logoA.width = wa;
+      }
+      document.getElementById("aa").onmouseover = enlargeA;
+
+      function enlargeT() {
+        const logoT = document.getElementById("tt");
+        let wt = logoT.width;
+
+        wt = wt * 1.2;
+
+        logoT.width = wt;
+      }
+      document.getElementById("tt").onmouseover = enlargeT;
+
+      function resizeC() {
+        const logoC = document.getElementById("cc");
+        let wc = logoC.width;
+        wc = wc / 1.2;
+
+        logoC.width = wc;
+      }
+      document.getElementById("cc").onmouseout = resizeC;
+
+      function resizeA() {
+        const logoA = document.getElementById("aa");
+        let wa = logoA.width;
+
+        wa = wa / 1.2;
+        logoA.width = wa;
+      }
+      document.getElementById("aa").onmouseout = resizeA;
+
+      function resizeT() {
+        const logoT = document.getElementById("tt");
+
+        let wt = logoT.width;
+
+        wt = wt / 1.2;
+
+        logoT.width = wt;
+      }
+      document.getElementById("tt").onmouseout = resizeT;
+
+      
+      document.getElementById("changeE").onmouseover = function () {
+        document.getElementById("changeE").style.fontSize = "1em";
+        document.getElementById("changeE").style.fontFamily = "cursive";
+        document.getElementById("changeE").style.backgroundColor="lavenderblush";
+     
       }
     </script>
   </body>

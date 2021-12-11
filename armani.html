@@ -8,7 +8,7 @@
     <meta name="description" content="This website introduces Armani." />
     <meta name="keywords" content="Armani" />
     <link rel="stylesheet" href="style.css" />
-    
+
     <title>Armani</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
@@ -33,6 +33,12 @@
       p,
       h3 {
         margin-left: 2%;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
       }
     </style>
   </head>
@@ -88,7 +94,6 @@
               height="250"
               style="border: 0"
               allowfullscreen=""
-              loading="lazy"
             ></iframe>
           </div>
         </td>
@@ -101,7 +106,7 @@
               height="250"
               style="border: 0"
               allowfullscreen=""
-              loading="lazy"
+             
             ></iframe>
           </div>
         </td>
@@ -113,12 +118,44 @@
               height="250"
               style="border: 0"
               allowfullscreen=""
-              loading="lazy"
+              
             ></iframe>
           </div>
         </td>
       </tr>
     </table>
-    <!--add store image hover to the maps-->
+    <div>
+      <img
+        src="images/aoutside.jpg"
+        alt="armanistore"
+        title="Armani's Store"
+        width="350"
+        height="330"
+        id="store"
+        onmouseover="imageI()"
+        onmouseout="imageO()"
+      />
+    </div>
+    <script>
+      function imageO() {
+        const storeO = document.getElementById("store");
+        storeO.src = "images/aoutside.jpg";
+      }
+      function imageI() {
+        const storeI = document.getElementById("store");
+        storeI.src = "images/ainside.jpg";
+      }
+
+      document
+        .getElementById("store")
+        .addEventListener("mouseover", function () {
+          imageI();
+        });
+      document
+        .getElementById("store")
+        .addEventListener("mouseout", function () {
+          imageO();
+        });
+    </script>
   </body>
 </html>
